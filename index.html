@@ -1,508 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harshitha Pujari's professional software development portfolio.">
-  <title>Harshitha Pujari | Software Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Harshitha Pujari's Software Development Portfolio">
+<title>Harshitha Pujari | Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    :root {
-      --bg: #09090f;
-      --surface: #14121f;
-      --purple: #a855f7;
-      --light-purple: #c084fc;
-      --teal: #45e0c1;
-      --text: #f5f3ff;
-      --muted: #aaa7bd;
-      --border: #302440;
-    }
+:root {
+  --bg: #09090f;
+  --card: #141421;
+  --purple: #a855f7;
+  --cyan: #45e0c1;
+  --text: #f5f3ff;
+  --muted: #b7b4ca;
+  --border: #302a42;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
 
-    a {
-      transition: 0.25s ease;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 18px 8%;
-      background: #0b0a12;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-    .logo {
-      color: var(--light-purple);
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9, 9, 15, 0.96);
+  border-bottom: 1px solid var(--border);
+}
 
-    nav .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #ded9ed;
-      font-size: 13px;
-    }
+.logo {
+  color: #b78aff;
+  font-size: 26px;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      color: var(--light-purple);
-    }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 14px;
+}
 
-    section {
-      padding: 75px 10%;
-      scroll-margin-top: 75px;
-    }
+.nav-links a:hover,
+.contact-links a:hover {
+  color: var(--cyan);
+}
 
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(ellipse at 85% 20%, #4c197044, transparent 45%),
-        radial-gradient(ellipse at 10% 90%, #25104644, transparent 40%),
-        var(--bg);
-    }
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+  background:
+    radial-gradient(ellipse at 80% 45%, #272050 0%, transparent 48%),
+    radial-gradient(ellipse at 10% 90%, #102e39 0%, transparent 40%);
+}
 
-    .hero-content {
-      max-width: 850px;
-    }
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #7660a5;
+  border-radius: 30px;
+  color: var(--cyan);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
 
-    .eyebrow {
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
+h1 {
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
 
-    h1 {
-      font-size: clamp(40px, 7vw, 72px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin-bottom: 14px;
-    }
+.gradient {
+  background: linear-gradient(90deg, #e7a8ff, #8c8cff, #45e0c1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-    .gradient {
-      background: linear-gradient(90deg, var(--light-purple), var(--teal));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
+.hero h2 {
+  font-size: clamp(21px, 3vw, 29px);
+  margin-bottom: 12px;
+}
 
-    .hero h2 {
-      font-size: clamp(20px, 3vw, 29px);
-      color: #ded4f2;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
+.intro {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
 
-    .hero-description {
-      color: var(--muted);
-      max-width: 700px;
-      font-size: 16px;
-    }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
-    .buttons {
-      display: flex;
-      gap: 13px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: 1px solid #6e648a;
+  transition: 0.2s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 11px 21px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.btn.primary {
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  color: #09090f;
+  border: none;
+  font-weight: bold;
+}
 
-    .btn-primary {
-      color: #10091a;
-      background: linear-gradient(100deg, var(--light-purple), var(--teal));
-    }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-    .btn-secondary {
-      color: var(--text);
-      border: 1px solid #59416e;
-      background: #ffffff05;
-    }
+section {
+  padding: 48px 0;
+  scroll-margin-top: 75px;
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+.section-title {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 5px;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 220px));
-      gap: 14px;
-      margin-top: 38px;
-    }
+.section-subtitle {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
-    .stat {
-      padding: 17px;
-      background: #14121fc9;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
+.card {
+  background:
+    radial-gradient(ellipse at bottom left, #26304b, transparent 75%),
+    var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  height: auto;
+  min-height: 0;
+}
 
-    .stat strong {
-      display: block;
-      font-size: 17px;
-      color: var(--light-purple);
-    }
+.card h3 {
+  color: var(--cyan);
+  font-size: 21px;
+  margin-bottom: 8px;
+}
 
-    .stat span {
-      font-size: 12px;
-      color: var(--muted);
-    }
+.card h4 {
+  color: #e6d5ff;
+  font-size: 16px;
+  margin: 16px 0 5px;
+}
 
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+.card p {
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
 
-    .section-subtitle {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
+.card strong {
+  color: var(--text);
+}
 
-    .card {
-      padding: 24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      transition: border-color 0.25s, transform 0.25s;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
 
-    .card:hover {
-      border-color: var(--purple);
-      transform: translateY(-3px);
-    }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .card h3 {
-      color: var(--light-purple);
-      font-size: 18px;
-      margin-bottom: 9px;
-    }
+.skill {
+  padding: 8px 13px;
+  border: 1px solid #51416f;
+  border-radius: 8px;
+  background: #171423;
+  color: #e8d9ff;
+  font-size: 14px;
+}
 
-    .card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
+.project-stack {
+  color: var(--cyan) !important;
+  font-size: 13px;
+  margin-top: 14px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 17px;
-    }
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 15px;
+}
 
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.contact-links a {
+  color: var(--cyan);
+  overflow-wrap: anywhere;
+}
 
-    .skill {
-      display: inline-block;
-      padding: 8px 13px;
-      background: #21142f;
-      border: 1px solid #47305e;
-      color: #e9d5ff;
-      border-radius: 7px;
-      font-size: 13px;
-    }
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
 
-    .project-label {
-      display: inline-block;
-      color: var(--teal);
-      background: #45e0c10d;
-      border: 1px solid #45e0c133;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 11px;
-      margin-bottom: 13px;
-    }
+@media (max-width: 700px) {
+  nav {
+    padding: 14px 0;
+    align-items: flex-start;
+  }
 
-    .project-list {
-      padding-left: 20px;
-      margin: 12px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+  .nav-links {
+    justify-content: flex-end;
+    gap: 10px 12px;
+    font-size: 12px;
+  }
 
-    .project-list li {
-      margin: 5px 0;
-    }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-    .contact-card {
-      max-width: 650px;
-    }
+  .hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
 
-    .contact-card p {
-      margin-bottom: 12px;
-    }
-
-    .contact-card a {
-      color: var(--light-purple);
-      text-decoration: none;
-      overflow-wrap: anywhere;
-    }
-
-    footer {
-      padding: 22px 8%;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      text-align: center;
-      font-size: 12px;
-    }
-
-    @media (max-width: 650px) {
-      nav {
-        flex-direction: column;
-        padding: 15px 5%;
-      }
-
-      nav .links {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
-
-      .hero {
-        min-height: 75vh;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .section-title {
-        font-size: 28px;
-      }
-    }
-  </style>
+  .intro {
+    font-size: 15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="logo">HP.</div>
-
-    <div class="links">
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">HP.</a>
+    <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
+      <a href="#internship">Internship</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="#education">Education</a>
     </div>
   </nav>
+</header>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="eyebrow">SOFTWARE DEVELOPMENT INTERN</p>
+<main>
 
-      <h1>Harshitha <span class="gradient">Pujari</span></h1>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container">
+    <span class="badge">Software Development Intern</span>
 
-      <h2>Aspiring Software Developer</h2>
+    <h1>Hi, I'm <span class="gradient">Harshitha Pujari</span></h1>
 
-      <p class="hero-description">
-        Computer Science and Engineering graduate specializing in
-        Data Science, currently gaining practical software development
-        experience at TAP Academy. Focused on Java, SQL, web technologies
-        and building reliable software solutions through continuous learning.
-      </p>
+    <h2>Aspiring Software Developer</h2>
 
-      <div class="buttons">
-        <a href="#projects" class="btn btn-primary">View Projects ↗</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-      </div>
+    <p class="intro">
+      A B.Tech graduate in Computer Science and Engineering
+      (Data Science), currently learning Java Full Stack Web
+      Development. I am interested in programming, web technologies,
+      databases, and building useful software solutions.
+    </p>
 
-      <div class="stats">
-        <div class="stat">
-          <strong>TAP Academy</strong>
-          <span>Software Development Internship</span>
-        </div>
-
-        <div class="stat">
-          <strong>7.84 / 10</strong>
-          <span>B.Tech CGPA</span>
-        </div>
-      </div>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore My Project ↗</a>
+      <a class="btn" href="#contact">Contact Me</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
     <h2 class="section-title">About <span class="gradient">Me</span></h2>
-    <p class="section-subtitle">Professional profile</p>
+    <p class="section-subtitle">A little about my journey</p>
 
     <div class="card">
       <p>
-        I am a Computer Science and Engineering graduate with a
-        specialization in Data Science from Eluru College of Engineering
-        and Technology. I am currently gaining practical exposure to
-        software development through my internship at TAP Academy.
-        My technical learning includes Core Java, Advanced Java, SQL,
-        HTML, CSS, JavaScript, Spring and Hibernate. I am committed to
-        strengthening my programming, database and problem-solving skills
-        while growing as a software developer.
+        I am a Computer Science and Engineering graduate specializing
+        in Data Science from Eluru College of Engineering and Technology.
+      </p>
+      <p>
+        I am currently gaining professional learning experience at
+        TAP Academy, focusing on Java Full Stack Web Development,
+        programming fundamentals, frontend technologies, and databases.
+      </p>
+      <p>
+        My goal is to strengthen my technical knowledge, improve
+        problem-solving skills, and grow as a software developer.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2 class="section-title">Professional <span class="gradient">Experience</span></h2>
-    <p class="section-subtitle">Internship</p>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical <span class="gradient">Skills</span></h2>
+    <p class="section-subtitle">Technologies I am learning and practising</p>
+
+    <div class="skills">
+      <span class="skill">Core Java</span>
+      <span class="skill">Advanced Java</span>
+      <span class="skill">SQL</span>
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Spring</span>
+      <span class="skill">Hibernate</span>
+      <span class="skill">Python Basics</span>
+      <span class="skill">OOP Concepts</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIP -->
+<section id="internship">
+  <div class="container">
+    <h2 class="section-title">Internship <span class="gradient">Experience</span></h2>
+    <p class="section-subtitle">My professional learning journey</p>
 
     <div class="card">
       <h3>Software Development Intern</h3>
       <p><strong>TAP Academy</strong></p>
-      <p style="margin-top: 5px;">May 2026 – Present</p>
+      <p>May 2026 – Present</p>
 
-      <ul class="project-list">
-        <li>Building practical knowledge of software development concepts.</li>
-        <li>Learning and practising programming and database technologies.</li>
-        <li>Developing technical and problem-solving skills through training.</li>
-      </ul>
+      <p>
+        Currently participating in software development training
+        and strengthening my technical foundation through programming
+        practice and hands-on learning activities.
+      </p>
+
+      <h4>Java Full Stack Web Development</h4>
+
+      <p>
+        Learning how frontend, backend, and database technologies
+        work together to build web applications. Focusing on Java
+        programming, web page development, database operations,
+        and application fundamentals.
+      </p>
+
+      <h4>Frontend Development</h4>
+      <p>
+        Practising HTML5 to structure web pages, CSS3 to style
+        layouts, and JavaScript to understand interactive features.
+      </p>
+
+      <h4>Backend Development</h4>
+      <p>
+        Strengthening Core Java, Advanced Java, and object-oriented
+        programming concepts. Learning about Spring and Hibernate
+        as part of my full-stack learning path.
+      </p>
+
+      <h4>Database Management</h4>
+      <p>
+        Practising SQL queries and learning how to create, retrieve,
+        update, and manage information stored in relational databases.
+      </p>
+
+      <h4>Practical Learning</h4>
+      <p>
+        Working on coding exercises, debugging practice, web page
+        layouts, SQL problems, and programming challenges to improve
+        problem-solving and development skills.
+      </p>
+
+      <p class="project-stack">
+        Learning Technologies: Java · HTML · CSS · JavaScript ·
+        SQL · Spring · Hibernate
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2 class="section-title">Technical <span class="gradient">Skills</span></h2>
-    <p class="section-subtitle">Technologies and concepts</p>
-
-    <div class="card">
-      <div class="skill-list">
-        <span class="skill">Core Java</span>
-        <span class="skill">Advanced Java</span>
-        <span class="skill">SQL</span>
-        <span class="skill">HTML5</span>
-        <span class="skill">CSS3</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">Spring</span>
-        <span class="skill">Hibernate</span>
-        <span class="skill">DBMS</span>
-        <span class="skill">Python Basics</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
     <h2 class="section-title">Featured <span class="gradient">Project</span></h2>
-    <p class="section-subtitle">Academic project</p>
+    <p class="section-subtitle">Academic project overview</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>MoodleBot</h3>
+        <p><strong>LLM-Driven Chatbot for Higher Education</strong></p>
+
+        <p>
+          MoodleBot is an AI-powered academic chatbot project integrated
+          with Moodle LMS to support students with questions related
+          to Database and Information Systems courses.
+        </p>
+
+        <p>
+          The project uses a Retrieval-Augmented Generation (RAG)
+          approach, combining language model capabilities with relevant
+          course-content retrieval to support context-aware responses.
+        </p>
+
+        <h4>Key Features</h4>
+        <p>Academic question answering and course-content retrieval.</p>
+        <p>Automated FAQ support and educator analytics concepts.</p>
+
+        <p class="project-stack">
+          Python · LLM APIs · RAG Framework · Moodle LMS · SQL
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Project Learning Outcomes</h3>
+        <p>
+          This academic project explores how AI language models can
+          be combined with course material to support student learning.
+        </p>
+        <p>
+          Key concepts include information retrieval, language-model
+          responses, academic content, and learning-platform integration.
+        </p>
+        <p>
+          Implementation details and a demo link can be added after
+          verifying the actual project files.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
+    <p class="section-subtitle">Connect with me professionally</p>
 
     <div class="card">
-      <span class="project-label">AI · RAG · Education</span>
+      <h3>Contact Details</h3>
+      <p>Feel free to contact me for professional opportunities and networking.</p>
 
-      <h3>MoodleBot – LLM-Driven Chatbot for Higher Education</h3>
+      <div class="contact-links">
+        <a href="mailto:sriharshithapujari89@gmail.com">✉ Email Me</a>
 
-      <p>
-        An AI-powered chatbot integrated with Moodle LMS to provide
-        academic support for Database and Information Systems courses.
-        The project uses a Retrieval-Augmented Generation (RAG) approach
-        to retrieve relevant course information and help generate
-        context-based responses.
-      </p>
+        <a href="https://www.linkedin.com/in/harshithapujari5748341/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn ↗
+        </a>
 
-      <ul class="project-list">
-        <li>Provides academic support through conversational interaction.</li>
-        <li>Uses relevant course content to support answer generation.</li>
-        <li>Designed to help automate frequently asked academic questions.</li>
-      </ul>
-
-      <p>
-        <strong>Technologies:</strong>
-        Python, LLM APIs, RAG Framework, Moodle LMS and SQL
-      </p>
+        <a href="https://github.com/harshitha29-oss"
+           target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </div>
 
       <p style="margin-top: 15px;">
-        Project report and access link will be added after the project
-        files have been reviewed.
+        Email: sriharshithapujari89@gmail.com
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
-    <p class="section-subtitle">
-      Professional networking and software development opportunities
-    </p>
-
-    <div class="card contact-card">
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:YOUR_EMAIL_HERE">Add your email address</a>
-      </p>
-
-      <p>
-        <strong>LinkedIn:</strong>
-        <a href="YOUR_LINKEDIN_PROFILE_URL">Add your LinkedIn profile URL</a>
-      </p>
-
-      <p>
-        <strong>GitHub:</strong>
-        <a href="YOUR_GITHUB_PROFILE_URL">Add your GitHub profile URL</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- EDUCATION LAST -->
-  <section id="education">
-    <h2 class="section-title">Educational <span class="gradient">Background</span></h2>
+<!-- EDUCATION - LAST -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">My <span class="gradient">Education</span></h2>
     <p class="section-subtitle">Academic qualification</p>
 
     <div class="card">
       <h3>Bachelor of Technology (B.Tech)</h3>
       <p>Computer Science and Engineering – Data Science</p>
       <p>Eluru College of Engineering and Technology</p>
-      <p style="margin-top: 8px;"><strong>CGPA: 7.84 / 10</strong></p>
+      <p><strong>CGPA: 7.84 / 10</strong></p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Harshitha Pujari. All rights reserved.
-  </footer>
+</main>
+
+<footer>
+  © 2026 Harshitha Pujari. All rights reserved.
+</footer>
 
 </body>
 </html>
