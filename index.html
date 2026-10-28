@@ -1,0 +1,419 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Harshitha Pujari | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --purple: #a855f7;
+      --light-purple: #c084fc;
+      --background: #09090f;
+      --card: #14121f;
+      --text: #f5f3ff;
+      --muted: #b5b1c5;
+      --border: #302440;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: #0c0b13;
+      border-bottom: 1px solid #292038;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: var(--light-purple);
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #eee8ff;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: var(--light-purple);
+    }
+
+    section {
+      padding: 65px 10%;
+      scroll-margin-top: 70px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background:
+        radial-gradient(ellipse at 80% 30%, #351453 0%, transparent 40%),
+        #09090f;
+    }
+
+    .tag {
+      color: var(--light-purple);
+      border: 1px solid #61338a;
+      background: #1c102a;
+      padding: 5px 14px;
+      border-radius: 25px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.2;
+      margin: 23px 0 15px;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--light-purple);
+    }
+
+    .hero p,
+    .intro {
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 15px;
+    }
+
+    .buttons,
+    .contact-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      border: 1px solid var(--purple);
+      color: white;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #9333ea;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #7e22ce;
+    }
+
+    h2 {
+      font-size: 29px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--purple);
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      color: var(--light-purple);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    .skill {
+      display: inline-block;
+      background: #21142f;
+      border: 1px solid #47305e;
+      color: #e9d5ff;
+      border-radius: 7px;
+      padding: 7px 12px;
+      margin: 4px;
+      font-size: 13px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--light-purple);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      color: #aaa2b8;
+      border-top: 1px solid #292038;
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        padding: 14px 5%;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 11px;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">HP.</div>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <span class="tag">Software Development Intern</span>
+
+    <h1>Hi, I'm <span>Harshitha Pujari</span></h1>
+
+    <p>
+      A B.Tech graduate in Computer Science and Engineering
+      (Data Science), building my skills in software development
+      and creating meaningful technology solutions.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore My Project</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About <span>Me</span></h2>
+
+    <p class="intro">
+      I am a B.Tech graduate in Computer Science and Engineering
+      (Data Science) from Eluru College of Engineering and Technology.
+      I am currently gaining practical experience through my
+      Software Development Internship at TAP Academy.
+      I am developing my technical skills in Java, SQL, web
+      technologies, and backend development. I enjoy learning new
+      technologies, solving problems, and continuously improving
+      my programming knowledge to grow as a software developer.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>My <span>Education</span></h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>B.Tech</h3>
+        <p>Computer Science and Engineering – Data Science</p>
+        <p>Eluru College of Engineering and Technology</p>
+        <p>CGPA: 7.84</p>
+      </div>
+
+      <div class="card">
+        <h3>Intermediate</h3>
+        <p>Sri Chaitanya Junior College</p>
+        <p>Percentage: 84.8%</p>
+      </div>
+
+      <div class="card">
+        <h3>SSC (10th)</h3>
+        <p>Vignan Global Gen School</p>
+        <p>Percentage: 70%</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical <span>Skills</span></h2>
+
+    <p class="intro">
+      Technologies I have learned and am developing practical
+      experience in.
+    </p>
+
+    <div style="margin-top: 18px;">
+      <span class="skill">Core Java</span>
+      <span class="skill">Advanced Java</span>
+      <span class="skill">SQL</span>
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Spring</span>
+      <span class="skill">Hibernate</span>
+      <span class="skill">Python Basics</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>My <span>Experience</span></h2>
+
+    <div class="card">
+      <h3>Software Development Intern</h3>
+      <p><strong>TAP Academy</strong></p>
+      <p>May 2026 – Present</p>
+
+      <p style="margin-top: 12px;">
+        Gaining practical exposure to software development concepts,
+        programming, databases, and web technologies while
+        strengthening technical and problem-solving skills.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project -->
+  <section id="projects">
+    <h2>Featured <span>Project</span></h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>MoodleBot – AI-Powered Academic Chatbot</h3>
+
+        <p>
+          An AI-powered chatbot integrated with Moodle LMS to
+          provide academic support for Database and Information
+          Systems courses.
+        </p>
+
+        <ul>
+          <li>Uses Retrieval-Augmented Generation (RAG).</li>
+          <li>Retrieves relevant course information to answer questions.</li>
+          <li>Designed to support students and reduce repetitive FAQ work.</li>
+        </ul>
+
+        <p style="margin-top: 12px;">
+          <strong>Technologies:</strong> Python, LLM APIs, RAG,
+          Moodle LMS, SQL
+        </p>
+
+        <a class="project-link" href="#contact">
+          Project details coming soon →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Let's <span>Connect</span></h2>
+
+    <p class="intro">
+      I am interested in learning, collaborating, and growing
+      in software development. Feel free to connect with me.
+    </p>
+
+    <div class="contact-links">
+
+      <a class="btn primary" href="mailto:YOUR_EMAIL_HERE">
+        Email Me
+      </a>
+
+      <a class="btn"
+         href="YOUR_LINKEDIN_PROFILE_URL"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a class="btn"
+         href="YOUR_GITHUB_PROFILE_URL"
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Harshitha Pujari. All rights reserved.
+  </footer>
+
+</body>
+</html>
